@@ -25,7 +25,10 @@ jobs:
           mkdir -p ardupilot/libraries/AP_HAL_ChibiOS/hwdef/JIJIEFPVH743
           cp hwdef/JIJIEFPVH743/hwdef.dat ardupilot/libraries/AP_HAL_ChibiOS/hwdef/JIJIEFPVH743/
           cp hwdef/JIJIEFPVH743/hwdef-bl.dat ardupilot/libraries/AP_HAL_ChibiOS/hwdef/JIJIEFPVH743/
-
+          
+          # Register the custom board ID
+          echo "AP_HW_JIJIEFPVH743 1043" >> ardupilot/Tools/AP_Bootloader/board_types.txt
+          
       - name: Install dependencies
         run: |
           cd ardupilot
