@@ -23,8 +23,8 @@ jobs:
       - name: Copy custom board
         run: |
           mkdir -p ardupilot/libraries/AP_HAL_ChibiOS/hwdef/JIJIEFPVH743
-          cp hwdef.dat ardupilot/libraries/AP_HAL_ChibiOS/hwdef/JIJIEFPVH743/
-          cp hwdef-bl.dat ardupilot/libraries/AP_HAL_ChibiOS/hwdef/JIJIEFPVH743/
+          cp hwdef/JIJIEFPVH743/hwdef.dat ardupilot/libraries/AP_HAL_ChibiOS/hwdef/JIJIEFPVH743/
+          cp hwdef/JIJIEFPVH743/hwdef-bl.dat ardupilot/libraries/AP_HAL_ChibiOS/hwdef/JIJIEFPVH743/
 
       - name: Install dependencies
         run: |
