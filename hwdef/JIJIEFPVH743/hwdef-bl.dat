@@ -14,9 +14,19 @@ FLASH_SIZE_KB 2048
 FLASH_RESERVE_START_KB 0
 FLASH_BOOTLOADER_LOAD_KB 128
 
+# UART/USB serial order
+# The bootloader must define at least one real USART/UART when the
+# ChibiOS SERIAL driver is enabled. USB CDC remains the primary
+# bootloader connection.
+SERIAL_ORDER OTG1 USART1
+
 # USB
 PA11 OTG_FS_DM OTG1
 PA12 OTG_FS_DP OTG1
+
+# USART1 (available bootloader serial port)
+PA9  USART1_TX USART1
+PA10 USART1_RX USART1
 
 # LED (optional)
 PD10 LED_BOOTLOADER OUTPUT LOW
